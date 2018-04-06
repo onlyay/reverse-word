@@ -1,0 +1,27 @@
+#include<iostream>
+#include<string>
+#include<vector>
+#include<stdlib.h>
+using namespace std;
+int main()
+{
+	vector<char>c;
+	string a = "I am a student.";
+	char* b = &a[0];
+	int count = 0;
+	while (*b!='.')
+	{
+		b++;
+		count++;
+	}
+	for (int i = count; i >= 0; i--)
+	{
+		c.push_back(a[i]);
+	}
+	for (int i = 0; i <= count; i++)
+	{
+		cout <<c[i];
+	}
+	system("pause");
+	return 0;
+}
